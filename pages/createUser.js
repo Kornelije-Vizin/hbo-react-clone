@@ -15,7 +15,7 @@ export default function CreateUser() {
         </div>
 
         <div className="create-user__form">
-          <Image className="create-user__user-img" src="https://uifaces.co/our-content/donated/vIqzOHXj.jpg" alt="Random face picture" />
+          <Image className="create-user__user-img" src="https://api.unrealperson.com/image?name=image.45572.3545089.jpg&type=tpdne" alt="Random face picture" />
             <div className="create-user__input-group">
               <label>Name</label>
               <input type="text" className="create-user__inputText"/>
