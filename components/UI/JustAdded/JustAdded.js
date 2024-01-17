@@ -1,3 +1,4 @@
+import Image from 'next/image';
 
 
 const JustAdded = (props) => {
@@ -16,7 +17,7 @@ const JustAdded = (props) => {
         
           {loopComp(
             (<div className="just-added__thumbnail">
-              <img src="https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88997/93196/Avengers-Endgame-Final-Style-Poster-buy-original-movie-posters-at-starstills__42370.1563973516.jpg?c=2?imbypass=on" />
+              <Image src="https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88997/93196/Avengers-Endgame-Final-Style-Poster-buy-original-movie-posters-at-starstills__42370.1563973516.jpg?c=2?imbypass=on" alt="Avengers Endgame Final Style Poster" />
               <div className="just-added__top-layer">
                 <i className="fas fa-play"/>  
               </div>  

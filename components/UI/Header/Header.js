@@ -1,5 +1,7 @@
 import Account from "../Account/Account"
 import SearchModal from "../SearchModal/SearchModal"
+import Image from 'next/image';
+
 
 
 const Header = (props) => {
@@ -14,7 +16,7 @@ const Header = (props) => {
     </div>
     <div className="top-header__logo"></div>
     <div className="top-header__account">
-      <img src="https://uifaces.co/our-content/donated/vIqzOHXj.jpg" className="top-header__user-img"/>
+    <Image src="https://uifaces.co/our-content/donated/vIqzOHXj.jpg" className="top-header__user-img" alt="User Profile"/>
       <div className="top-header__user-name">Bryant</div>
     </div>
     <Account />

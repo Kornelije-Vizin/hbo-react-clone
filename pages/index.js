@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Image from 'next/image';
+
 
 
 export default function Home() {
@@ -14,7 +16,7 @@ export default function Home() {
 
         <div className="login-user__form">
           <div className="login-user__user-box">
-            <img className="login-user__user-img" src="https://mighty.tools/mockmind-api/content/human/39.jpg" />
+            <Image className="login-user__user-img" src="https://mighty.tools/mockmind-api/content/human/39.jpg" alt="Random human face" />
             <div className="login-user__user-name">Bryant</div>
           </div>
         </div>
