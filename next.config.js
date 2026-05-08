@@ -7,6 +7,7 @@ const nextConfig = {
       'cdn.shopify.com',
       'uifaces.co',
       'api.unrealperson.com',
+      'mighty.tools',
     ],
   },
 }
