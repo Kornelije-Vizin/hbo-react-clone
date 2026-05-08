@@ -3,6 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
+    unoptimized: true,
+
     domains: [
       'cdn.shopify.com',
       'uifaces.co',
