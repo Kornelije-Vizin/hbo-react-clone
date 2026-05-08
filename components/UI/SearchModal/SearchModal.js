@@ -1,19 +1,29 @@
 import Image from 'next/image';
 
-
-const SearchModal = (props) => {
+const SearchModal = () => {
   const loopComp = (comp, digit) => {
     let thumbnails = [];
-    for(let index = 1; index <= digit; index++) {
-      thumbnails.push(comp)
+
+    for (let index = 1; index <= digit; index++) {
+      thumbnails.push(
+        <div key={index}>
+          {comp}
+        </div>
+      );
     }
 
     return thumbnails;
-  }
-  return(
+  };
+
+  return (
     <div className="search-modal">
-      <div className="search-modal__input-group ">
-        <input className="search-modal__input" type="text" placeholder="search for a title" value="" />
+      <div className="search-modal__input-group">
+        <input
+          className="search-modal__input"
+          type="text"
+          placeholder="search for a title"
+        />
+
         <div className="search-modal__close-btn">
           <i className="fas fa-times" />
         </div>
@@ -22,21 +32,26 @@ const SearchModal = (props) => {
       <h3 className="search-modal__title">
         Popular Searches
       </h3>
-      
+
       <div className="search-modal__thumbnails">
-        
-          {loopComp(
-            (<div className="search-modal__thumbnail">
-              <Image src="https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88997/93196/Avengers-Endgame-Final-Style-Poster-buy-original-movie-posters-at-starstills__42370.1563973516.jpg?c=2?imbypass=on" alt="Avengers Endgame Poster" />
-              <div className="search-modal__top-layer">
-                <i className="fas fa-play"/>  
-              </div>  
-            </div>), 10
-            
-            )}
+        {loopComp(
+          <div className="search-modal__thumbnail">
+            <Image
+              src="https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88997/93196/Avengers-Endgame-Final-Style-Poster-buy-original-movie-posters-at-starstills__42370.1563973516.jpg?c=2?imbypass=on"
+              alt="Avengers Endgame Poster"
+              width={220}
+              height={330}
+            />
+
+            <div className="search-modal__top-layer">
+              <i className="fas fa-play" />
+            </div>
+          </div>,
+          10
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default SearchModal;
