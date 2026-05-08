@@ -3,7 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    domains: ['cdn.shopify.com'],
+    domains: [
+      'cdn.shopify.com',
+      'uifaces.co',
+      'api.unrealperson.com',
+    ],
   },
 }
 
