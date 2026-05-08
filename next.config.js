@@ -8,6 +8,7 @@ const nextConfig = {
       'uifaces.co',
       'api.unrealperson.com',
       'mighty.tools',
+      'cdn11.bigcommerce.com',
     ],
   },
 }
