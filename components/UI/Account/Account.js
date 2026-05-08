@@ -2,19 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Account = () => {
-  const loopComp = (comp, digit) => {
-    let thumbnails = [];
-
-    for (let index = 1; index <= digit; index++) {
-      thumbnails.push(
-        <div key={index}>
-          {comp}
-        </div>
-      );
-    }
-
-    return thumbnails;
-  };
+  const watchList = Array.from({ length: 6 });
 
   return (
     <div className="account">
@@ -22,8 +10,11 @@ const Account = () => {
         <div className="account__title">My List</div>
 
         <div className="account__watch-list">
-          {loopComp(
-            <div className="account__watch-video">
+          {watchList.map((_, index) => (
+            <div
+              className="account__watch-video"
+              key={index}
+            >
               <Image
                 src="https://cdn.shopify.com/s/files/1/0013/2874/2466/products/rick-and-morty-tv-invasion-poster-24-x-36-581_1024x.jpg?v=1616627934"
                 alt="Rick and Morty TV Invasion Poster"
@@ -33,18 +24,25 @@ const Account = () => {
 
               <div className="account__watch-overlay">
                 <div className="account__watch-buttons">
-                  <div className="account__watch-circle">
+                  <button
+                    type="button"
+                    className="account__watch-circle"
+                    aria-label="Play"
+                  >
                     <i className="fas fa-play" />
-                  </div>
+                  </button>
 
-                  <div className="account__watch-circle">
+                  <button
+                    type="button"
+                    className="account__watch-circle"
+                    aria-label="Remove from list"
+                  >
                     <i className="fas fa-times" />
-                  </div>
+                  </button>
                 </div>
               </div>
-            </div>,
-            6
-          )}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -61,10 +59,15 @@ const Account = () => {
 
         <ul className="account__main">
           <li>
-            <Link href="/">Account</Link>
+            <Link href="/account">
+              Account
+            </Link>
           </li>
+
           <li>
-            <Link href="/">Sign Out</Link>
+            <Link href="/">
+              Sign Out
+            </Link>
           </li>
         </ul>
       </div>
