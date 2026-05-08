@@ -1,32 +1,45 @@
 import Image from 'next/image';
 
-
-const PosterView = (props) => {
+const PosterView = () => {
   const loopComp = (comp, digit) => {
     let thumbnails = [];
-    for(let index = 1; index <= digit; index++) {
-      thumbnails.push(comp)
+
+    for (let index = 1; index <= digit; index++) {
+      thumbnails.push(
+        <div key={index}>
+          {comp}
+        </div>
+      );
     }
 
     return thumbnails;
-  }
-  return(
+  };
+
+  return (
     <div className="poster-view">
-      <h3 className="poster-view__title">Movies</h3>
+      <h3 className="poster-view__title">
+        Movies
+      </h3>
+
       <div className="poster-view__thumbnails">
-        
-          {loopComp(
-            (<div className="poster-view__thumbnail">
-              <Image src="https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88997/93196/Avengers-Endgame-Final-Style-Poster-buy-original-movie-posters-at-starstills__42370.1563973516.jpg?c=2?imbypass=on" alt="Avengers Endgame Final Style Poster"/>
-              <div className="poster-view__top-layer">
-                <i className="fas fa-play"/>  
-              </div>  
-            </div>), 10
-            
-            )}
+        {loopComp(
+          <div className="poster-view__thumbnail">
+            <Image
+              src="https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88997/93196/Avengers-Endgame-Final-Style-Poster-buy-original-movie-posters-at-starstills__42370.1563973516.jpg?c=2?imbypass=on"
+              alt="Avengers Endgame Final Style Poster"
+              width={220}
+              height={330}
+            />
+
+            <div className="poster-view__top-layer">
+              <i className="fas fa-play" />
+            </div>
+          </div>,
+          10
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default PosterView;
